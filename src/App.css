@@ -5,7 +5,7 @@
 }
 
 .App {
-  height: 100vh;
+  /* height: 100vh; */
   margin: 0 auto;
   background-color: #d4d4d4;
 }
@@ -13,6 +13,7 @@
 .mainWrapper {
   width: 60%;
   margin: 0 auto;
+  margin-bottom: 100px;
 }
 
 .currentTable {
@@ -50,6 +51,7 @@ thead tr {
   border-bottom: 1px solid black;
 }
 
+
 tbody tr:hover {
   /* transform: scale(1);
   transition: transform .2s;
@@ -83,4 +85,65 @@ th:nth-child(1), td:nth-child(1) {
 
 .lockImg {
   width: 20px;
+}
+
+/* TABLE VAR 2 */
+
+.tableVar2 {
+  padding-top: 50px;
+  max-width: 60%;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.tableVar2 h3 {
+  margin-bottom: 40px;
+}
+
+.tablevar2__row {
+  display:flex; 
+  height: 60px;
+}
+
+.elements__wrapper {
+  display: flex;
+  width: 98%;
+  margin: 0 auto;
+  border-top: 1px solid black;
+}
+
+.tablevar2__row:hover {
+  box-shadow: 0 0 10px #ccc;
+  transition: .3s ease;
+}
+
+.tablevar2__row:hover .elements__wrapper {
+  border-style: none;
+}
+
+.tablevar2__row:hover + .tablevar2__row .elements__wrapper {
+  border-style:none;
+} 
+
+.element__toolname {
+  align-self: center;
+  width: 43%;
+}
+
+.element__used {
+  align-self: center;
+  text-align: center;
+  width: 15%;
+}
+
+.element__type {
+  width: 25%;
+  align-self: center;
+  text-align: center;
+}
+
+.element__status {
+  align-self: center;
+  width:17%;
+  text-align: center;
 }

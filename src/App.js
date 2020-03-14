@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Tableelement from './Tableelement';
+import Tableelement2 from './Tableelement2';
 
 function App() {
   const [data, setData] = useState([
@@ -80,6 +81,7 @@ function App() {
       setSortState({...sortState, dir: true, col:column})
     }
   }
+
   const checkSearch = (el) => {
     if (searchData) {
        return el['name'].toLowerCase().includes(searchData.toLowerCase()) 
@@ -106,6 +108,10 @@ function App() {
             </tbody>
           </table>
         </div>
+      </div>
+      <div className = 'tableVar2'>
+        <h3>Table ver.2</h3>
+        {data.filter(el => checkSearch(el)).length ? data.filter(el => checkSearch(el)).map((elem, index) => <Tableelement2 {...elem} index = {index}/>) : <p>No results, sorry :(</p> }
       </div>
     </div>
   );
