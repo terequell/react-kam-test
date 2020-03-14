@@ -1,20 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import lockicon from './img/lockicon.png'
 
 const Tableelement2 = ({name,sites,type,status}) => {
-   const [isActive, setIsActive] = useState(false)
-
-   const onHoverRow = (e) => {
-      setIsActive(true)
-   }
-
-   const onLeaveRow = (e) => {
-      setIsActive(false)
-   }
-
    return (
       <div className = 'tablevar2__row' >
-         <div className = {'elements__wrapper ' + (isActive ? 'currentRow' : '')} onMouseEnter = {onHoverRow} onMouseLeave = {onLeaveRow}>
+         <div className = {'elements__wrapper'} >
             <div className = 'element__toolname'>
                <span>{name}</span>
             </div>
